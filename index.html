@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Basic Image Editor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="/Users/brandonellis/Documents/Code Projects/image_editor/style.css" />
+    </head>
+    
+    
+    <body>
+        
+
+    <div class="header">
+
+        <h1>Basic Image Editor</h1>
+        <!-- Form for collecting image URL -->
+        <form id="urlBox" class="center">
+            <input class="url-box" type="url" id="imgUrl" placeholder="Enter a valid URL" autofocus>
+            <input id="go" type="button" value="Go">
+        </form>
+
+        <p class="sampleUrl" id="sampleUrl">Sample url: https://bit.ly/2DroBYv</p>
+    </div>
+
+
+    <div class="main">
+        <!-- container where image will be loaded-->
+
+        <div class="controls">
+            <h2>Controls</h2>
+
+            <form id="imageEditor">
+                
+                <p>
+                    <label for="saturation">Saturation</label>
+                    <input id="saturation" class="value100" name="saturation" type="range" min="0" max="200" value="100" >
+                </p>
+                
+                <p>
+                    <label for="contrast">Contrast</label>
+                    <input id="contrast" class="value100" name="contrast" type="range" min="0" max="200" value="100" >
+                </p>
+
+                <p>
+                    <label for="brightness">Brightness</label>
+                    <input id="brightness" class="value100" name="brightness" type="range" min="0" max="200" value="100" >
+                </p>
+
+                <p>
+                    <label for="gs">Gray Scale</label>
+                    <input id="gs" class="value0" name="gs" type="range" min="0" max="100" value="0" >
+                </p>
+
+                <p>
+                    <label for="sepia">Sepia</label>
+                    <input id="sepia" class="value0" name="sepia" type="range" min="0" max="100" value="0" >
+                </p>
+
+                <p>
+                    <label for="blur">Blur</label>
+                    <input id="blur" class="value0" name="blur" type="range" min="0" max="10" value="0" >
+                </p>
+
+                <input id="reset" type="button" value="Reset">
+            </form>
+        </div>
+
+
+        <div id="imageContainer" class="center img-section">
+            <h2 id="pre-img-txt">Your image will be displayed here</h2>
+            <img src="" alt=""/>
+        </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/Users/brandonellis/Documents/Code Projects/image_editor/img_editor.js"></script>
+    </body>
+</html>
